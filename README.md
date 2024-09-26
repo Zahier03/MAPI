@@ -5,6 +5,7 @@ Mapi was created to represent the learning journey and experiences I encountered
 
 Feels free to use this as template or upgrading this application
 
---------instruction----------
-before you start please change api key first to you gemini 1.5 flash api key, it *free* (primary reason i chose gemini). it located in app/main/java/com/example/firstaiapp/PromtAIActibity.kt
+-----------------------------
+before you start please change api key first to you gemini 1.5 flash api key, it *free* (primary reason i chose gemini).
+it located in app/main/java/com/example/firstaiapp/PromtAIActibity.kt
 -----------------------------
