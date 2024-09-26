@@ -4,3 +4,7 @@ Mapi is a project that utilizes artificial intelligence to address common learni
 Mapi was created to represent the learning journey and experiences I encountered during my tertiary education. This project serves as my final year project in the Diploma in Electronic Engineering (Computer), focusing on the application of artificial intelligence.
 
 Feels free to use this as template or upgrading this application
+
+--------instruction----------
+before you start please change api key first to you gemini 1.5 flash api key, it *free* (primary reason i chose gemini). it located in app/main/java/com/example/firstaiapp/PromtAIActibity.kt
+-----------------------------
