@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Top Buttons Scroll View -->
+    <HorizontalScrollView
+        android:id="@+id/top_buttons_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/draw_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Draw"
+                android:layout_margin="3dp"
+                android:textSize="14sp"
+                android:backgroundTint="@color/warmYellow"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/change_paint_color_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change Color"
+                android:layout_margin="3dp"
+                android:textSize="14sp"
+                android:backgroundTint="@color/warmYellow"
+                android:textColor="@android:color/white"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/undo_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:textSize="14sp"
+                android:backgroundTint="@color/warmYellow"
+                android:text="Undo"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/edit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit Tittle"
+                android:layout_margin="3dp"
+                android:textSize="14sp"
+                android:backgroundTint="@color/warmYellow"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/add_branch_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:textSize="14sp"
+                android:backgroundTint="@color/warmYellow"
+                android:text="Add Node"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/delete_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:textSize="14sp"
+                android:backgroundTint="@color/warmYellow"
+                android:text="Delete"
+                android:textColor="@android:color/white" />
+
+
+            <Button
+                android:id="@+id/edit_explanation_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:textSize="14sp"
+                android:backgroundTint="@color/warmYellow"
+                android:text="Edit Explanation"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/add_sticker_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:textSize="14sp"
+                android:backgroundTint="@color/warmYellow"
+                android:text="Add Sticker"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/change_color_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:textSize="14sp"
+                android:backgroundTint="@color/warmYellow"
+                android:text="Change Color"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/change_theme_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:textSize="14sp"
+                android:backgroundTint="@color/warmYellow"
+                android:text="Change Theme"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/export_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:textSize="14sp"
+                android:backgroundTint="@color/warmYellow"
+                android:text="Export"
+                android:textColor="@android:color/white" />
+
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Mind Map Scrollable Area -->
+    <HorizontalScrollView
+        android:id="@+id/horizontal_scroll_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_constraintTop_toBottomOf="@id/top_buttons_scroll_view"
+        app:layout_constraintBottom_toTopOf="@+id/reset_view_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ScrollView
+            android:id="@+id/vertical_scroll_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <FrameLayout
+                android:id="@+id/mind_map_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.example.firstaiapp.MindMapView
+                    android:id="@+id/mind_map_view"
+                    android:layout_width="5000dp"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:scrollbars="none" />
+
+            </FrameLayout>
+        </ScrollView>
+    </HorizontalScrollView>
+
+    <Button
+        android:id="@+id/cancel_draw_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="120dp"
+        android:backgroundTint="@color/warmYellow"
+        android:text="Cancel Draw"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="14sp" />
+
+    <!-- Export Button -->
+    <Button
+        android:id="@+id/reset_view_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset View"
+        android:textSize="14sp"
+        android:layout_margin="0dp"
+        android:backgroundTint="@color/warmYellow"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <!-- Zoom In/Out Buttons -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/zoom_in_button"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/warmYellow"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="3dp"
+            android:text="+"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/zoom_out_button"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/warmYellow"
+            android:layout_marginBottom="3dp"
+            android:text="-"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
